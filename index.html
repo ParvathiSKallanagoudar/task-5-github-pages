@@ -1,128 +1,914 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parvathi | DevOps Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta name="description" content="Parvathi S. Kallanagoudar - Associate Engineer specializing in DevOps, AWS Cloud Infrastructure, Kubernetes, Docker and CI/CD automation.">
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f3ff;
-            color: #222;
-            line-height: 1.6;
-        }
+<title>Parvathi S. Kallanagoudar | DevOps & Cloud Engineer</title>
 
-        header {
-            background: #4b2995;
-            color: white;
-            padding: 25px;
-            text-align: center;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        nav {
-            background: #30205e;
-            padding: 15px;
-            text-align: center;
-        }
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 15px;
-        }
+<style>
+:root {
+    --bg: #0b0914;
+    --card: #151223;
+    --purple: #a78bfa;
+    --pink: #e879f9;
+    --text: #f5f3ff;
+    --muted: #aaa3bd;
+    --border: #29243a;
+}
 
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-        h2 {
-            color: #4b2995;
-            margin-bottom: 15px;
-        }
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+}
 
-        .project {
-            background: white;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
-        }
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
-        footer {
-            background: #30205e;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+.container {
+    width: 88%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* NAVIGATION */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(11,9,20,0.94);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--purple);
+}
+
+.nav-links {
+    display: flex;
+    gap: 27px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 13px;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--purple);
+}
+
+.menu-btn {
+    display: none;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.hero-content {
+    max-width: 780px;
+    animation: fadeUp 1s ease;
+}
+
+.availability {
+    display: inline-block;
+    border: 1px solid #3d7658;
+    background: #10271c;
+    color: #86efac;
+    padding: 7px 15px;
+    border-radius: 30px;
+    font-size: 12px;
+    margin-bottom: 28px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 66px);
+    line-height: 1.15;
+    letter-spacing: -2px;
+    margin-bottom: 18px;
+}
+
+.gradient {
+    background: linear-gradient(90deg, #a78bfa, #e879f9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero h2 {
+    font-size: clamp(19px, 3vw, 27px);
+    color: #c4b5fd;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 650px;
+    color: var(--muted);
+    margin-bottom: 28px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.btn {
+    padding: 12px 23px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #8b5cf6, #c084fc);
+    color: white;
+}
+
+.btn-outline {
+    border: 1px solid #65518d;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px #8b5cf633;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 85px 0;
+}
+
+.section-title {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.section-subtitle {
+    color: var(--muted);
+    margin-bottom: 35px;
+    font-size: 14px;
+}
+
+/* ABOUT */
+
+.about-card,
+.project-card,
+.contact-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 28px;
+    transition: .3s;
+}
+
+.about-card p {
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+.about-card strong {
+    color: #d8b4fe;
+}
+
+/* SKILLS */
+
+.skill-group {
+    margin-bottom: 30px;
+}
+
+.skill-group h3 {
+    color: #c4b5fd;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+    gap: 15px;
+}
+
+.skill {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 12px;
+    text-align: center;
+    transition: .3s;
+}
+
+.skill:hover,
+.project-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--purple);
+}
+
+.skill i {
+    font-size: 38px;
+    color: var(--purple);
+    margin-bottom: 12px;
+    display: block;
+}
+
+.skill span {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* PROJECTS */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-number {
+    color: var(--pink);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.project-card h3 {
+    font-size: 19px;
+    margin: 14px 0;
+}
+
+.project-card p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 20px;
+}
+
+.tags span {
+    background: #28203d;
+    color: #d8b4fe;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+.project-link {
+    color: #c4b5fd;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: auto;
+}
+
+.project-link:hover {
+    color: var(--pink);
+}
+
+/* STRENGTHS */
+
+.strength-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.strength {
+    padding: 23px;
+    border-left: 3px solid var(--purple);
+    background: var(--card);
+    border-radius: 8px;
+}
+
+.strength h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.strength p {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* CONTACT */
+
+.contact-card {
+    text-align: center;
+}
+
+.contact-card p {
+    color: var(--muted);
+    margin: 15px 0 25px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* ANIMATIONS */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: .7s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width: 750px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        padding: 25px;
+        background: #151223;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 480px;
+    }
+
+    section {
+        padding: 65px 0;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Hi, I'm Parvathi!</h1>
-        <p>Aspiring DevOps and Cloud Engineer</p>
-    </header>
+<!-- NAVIGATION -->
 
-    <nav>
+<nav>
+<div class="container navbar">
+
+    <a href="#home" class="logo">PSK.</a>
+
+    <button class="menu-btn"
+            onclick="toggleMenu()"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            id="menuButton">☰</button>
+
+    <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-    </nav>
+    </div>
 
-    <section id="about">
-        <h2>About Me</h2>
+</div>
+</nav>
+
+<!-- HERO -->
+
+<header class="container hero" id="home">
+
+<div class="hero-content">
+
+    <div class="availability">
+        ● Open to DevOps & Cloud Opportunities
+    </div>
+
+    <h1>
+        Parvathi S.<br>
+        <span class="gradient">Kallanagoudar</span>
+    </h1>
+
+    <h2>Associate Engineer | DevOps & Cloud Infrastructure</h2>
+
+    <p>
+        Passionate about building reliable infrastructure,
+        automating deployments, and transforming application
+        delivery through modern DevOps and cloud technologies.
+        Focused on continuous improvement, automation,
+        and scalable engineering solutions.
+    </p>
+
+    <div class="buttons">
+
+        <a href="#projects" class="btn btn-primary">
+            Explore My Projects ↗
+        </a>
+
+        <a href="https://github.com/ParvathiSKallanagoudar"
+           target="_blank" rel="noopener"
+           class="btn btn-outline">
+            GitHub ↗
+        </a>
+
+        <a href="https://www.linkedin.com/in/parvathi-kallanagoudar-9b9a52276/"
+           target="_blank" rel="noopener"
+           class="btn btn-outline">
+            LinkedIn ↗
+        </a>
+
+    </div>
+
+</div>
+</header>
+
+<!-- ABOUT ME -->
+
+<section id="about">
+<div class="container reveal">
+
+    <h2 class="section-title">
+        About <span class="gradient">Me</span>
+    </h2>
+
+    <p class="section-subtitle">
+        A little about my engineering journey.
+    </p>
+
+    <div class="about-card">
+
         <p>
-            I am a Computer Science Engineering graduate
-            passionate about DevOps, Cloud Computing,
-            automation and continuous integration.
+            I'm a Computer Science Engineering graduate passionate
+            about <strong>DevOps, Cloud Infrastructure, and automation.</strong>
+            I have hands-on experience building CI/CD pipelines,
+            deploying containerized applications, managing Kubernetes
+            environments, and provisioning AWS infrastructure using Terraform.
         </p>
-    </section>
 
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <p>Linux | Git | GitHub | Docker | Kubernetes |
-           Jenkins | AWS | Terraform | Ansible</p>
-    </section>
-
-    <section id="projects">
-        <h2>My Projects</h2>
-
-        <div class="project">
-            <h3>Employee API CI/CD Pipeline</h3>
-            <p>Automated application deployment using Jenkins,
-               Docker and Kubernetes.</p>
-        </div>
-
-        <div class="project">
-            <h3>GitOps Deployment</h3>
-            <p>Implemented GitOps deployment using ArgoCD.</p>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: parvathikallanagoudar@gmail.com</p>
         <p>
-            GitHub:
-            <a href="https://github.com/ParvathiSKallanagoudar">
-                Visit My GitHub
+            My technical experience includes Linux administration,
+            Jenkins pipeline automation, Docker containerization,
+            Kubernetes deployments, and GitOps workflows using ArgoCD.
+            I have also worked with Prometheus and Grafana to monitor
+            application performance and system health.
+        </p>
+
+        <p>
+            I enjoy solving infrastructure challenges, improving
+            deployment consistency, automating repetitive operations,
+            and learning technologies that make systems more reliable
+            and scalable.
+        </p>
+
+        <p>
+            I'm looking forward to contributing to engineering teams
+            where I can apply my practical skills, take ownership of
+            technical challenges, and grow as a
+            <strong>DevOps and Cloud Infrastructure Engineer.</strong>
+        </p>
+
+    </div>
+</div>
+</section>
+
+<!-- TECHNICAL SKILLS -->
+
+<section id="skills">
+<div class="container reveal">
+
+    <h2 class="section-title">
+        Technical <span class="gradient">Skills</span>
+    </h2>
+
+    <p class="section-subtitle">
+        Technologies and tools I work with.
+    </p>
+
+    <div class="skill-group">
+        <h3>DevOps & Cloud</h3>
+
+        <div class="skills-grid">
+            <div class="skill"><i class="devicon-linux-plain"></i><span>Linux</span></div>
+            <div class="skill"><i class="devicon-docker-plain"></i><span>Docker</span></div>
+            <div class="skill"><i class="devicon-kubernetes-plain"></i><span>Kubernetes</span></div>
+            <div class="skill"><i class="devicon-jenkins-line"></i><span>Jenkins</span></div>
+            <div class="skill"><i class="devicon-amazonwebservices-plain-wordmark"></i><span>AWS</span></div>
+            <div class="skill"><i class="devicon-terraform-plain"></i><span>Terraform</span></div>
+            <div class="skill"><i class="devicon-ansible-plain"></i><span>Ansible</span></div>
+            <div class="skill"><i class="devicon-argocd-plain"></i><span>ArgoCD</span></div>
+        </div>
+    </div>
+
+    <div class="skill-group">
+        <h3>Version Control & Build Tools</h3>
+
+        <div class="skills-grid">
+            <div class="skill"><i class="devicon-git-plain"></i><span>Git</span></div>
+            <div class="skill"><i class="devicon-github-original"></i><span>GitHub</span></div>
+            <div class="skill"><i class="devicon-apache-plain"></i><span>Maven</span></div>
+        </div>
+    </div>
+
+    <div class="skill-group">
+        <h3>Monitoring & Observability</h3>
+
+        <div class="skills-grid">
+            <div class="skill"><i class="devicon-prometheus-original"></i><span>Prometheus</span></div>
+            <div class="skill"><i class="devicon-grafana-plain"></i><span>Grafana</span></div>
+        </div>
+    </div>
+
+    <div class="skill-group">
+        <h3>Programming, Database & Core CS</h3>
+
+        <div class="skills-grid">
+            <div class="skill"><i class="devicon-java-plain"></i><span>Java</span></div>
+            <div class="skill"><i class="devicon-python-plain"></i><span>Python</span></div>
+            <div class="skill"><i class="devicon-mysql-plain"></i><span>MySQL</span></div>
+            <div class="skill"><i class="devicon-windows8-original"></i><span>Windows</span></div>
+        </div>
+    </div>
+
+    <p class="section-subtitle">
+        Additional knowledge: CI/CD, Incident Management,
+        Root Cause Analysis, System Administration,
+        Operating Systems and Computer Networks.
+    </p>
+
+</div>
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+<div class="container reveal">
+
+    <h2 class="section-title">
+        Featured <span class="gradient">Projects</span>
+    </h2>
+
+    <p class="section-subtitle">
+        Real-world DevOps and Cloud Infrastructure projects
+        demonstrating automation, deployment and monitoring.
+    </p>
+
+    <div class="projects-grid">
+
+        <!-- PROJECT 1 -->
+
+        <article class="project-card">
+
+            <span class="project-number">PROJECT 01</span>
+
+            <h3>Cloud Native DevOps Pipeline for Employee API</h3>
+
+            <p>
+                Built an end-to-end CI/CD pipeline using Jenkins
+                for automated application build and deployment.
+                Containerized a Spring Boot Employee API using Docker
+                and deployed it on Kubernetes with multiple replicas.
+                Integrated Prometheus and Grafana for application
+                monitoring and performance visualization.
+            </p>
+
+            <div class="tags">
+                <span>Jenkins</span>
+                <span>Docker</span>
+                <span>Kubernetes</span>
+                <span>Prometheus</span>
+                <span>Grafana</span>
+                <span>GitHub</span>
+            </div>
+
+            <a class="project-link"
+               href="https://github.com/ParvathiSKallanagoudar/cloud-native-devops-pipeline"
+               target="_blank" rel="noopener">
+               <i class="devicon-github-original"></i>
+               View Source Code ↗
             </a>
-        </p>
-    </section>
 
-    <footer>
-        <p>© 2026 Parvathi | Hosted with GitHub Pages</p>
-    </footer>
+        </article>
+
+        <!-- PROJECT 2 -->
+
+        <article class="project-card">
+
+            <span class="project-number">PROJECT 02</span>
+
+            <h3>Employee API GitOps Deployment using ArgoCD</h3>
+
+            <p>
+                Implemented a GitOps workflow using GitHub as the
+                single source of truth for Kubernetes manifests.
+                Configured ArgoCD Auto Sync, Self-Healing and
+                Configuration Drift Detection. Demonstrated
+                desired-state reconciliation, Git-based rollback
+                and automated deployment synchronization.
+            </p>
+
+            <div class="tags">
+                <span>ArgoCD</span>
+                <span>Kubernetes</span>
+                <span>GitHub</span>
+                <span>Docker</span>
+                <span>Jenkins</span>
+                <span>Linux</span>
+                <span>Prometheus</span>
+                <span>Grafana</span>
+            </div>
+
+            <a class="project-link"
+               href="https://github.com/ParvathiSKallanagoudar/employee-api-gitops"
+               target="_blank" rel="noopener">
+               <i class="devicon-github-original"></i>
+               View Source Code ↗
+            </a>
+
+        </article>
+
+        <!-- PROJECT 3 -->
+
+        <article class="project-card">
+
+            <span class="project-number">PROJECT 03</span>
+
+            <h3>AWS Multi-Tier Infrastructure using Terraform</h3>
+
+            <p>
+                Provisioned AWS infrastructure using Terraform,
+                including a custom VPC, public subnet, Internet
+                Gateway, Route Table, Security Group and Ubuntu
+                EC2 instance. Configured SSH and HTTP access,
+                deployed an Nginx web server and implemented
+                remote state management using Amazon S3 with
+                DynamoDB state locking.
+            </p>
+
+            <div class="tags">
+                <span>Terraform</span>
+                <span>AWS</span>
+                <span>VPC</span>
+                <span>EC2</span>
+                <span>S3</span>
+                <span>DynamoDB</span>
+                <span>Linux</span>
+                <span>Nginx</span>
+            </div>
+
+            <a class="project-link"
+               href="https://github.com/ParvathiSKallanagoudar/terraform-aws-infrastructure"
+               target="_blank" rel="noopener">
+               <i class="devicon-github-original"></i>
+               View Source Code ↗
+            </a>
+
+        </article>
+
+    </div>
+</div>
+</section>
+
+<!-- WHAT I BRING -->
+
+<section id="strengths">
+<div class="container reveal">
+
+    <h2 class="section-title">
+        What I <span class="gradient">Bring</span>
+    </h2>
+
+    <p class="section-subtitle">
+        My approach to engineering and operations.
+    </p>
+
+    <div class="strength-grid">
+
+        <div class="strength">
+            <h3>Automation Mindset</h3>
+            <p>Reducing manual effort through CI/CD and Infrastructure as Code.</p>
+        </div>
+
+        <div class="strength">
+            <h3>Cloud Infrastructure</h3>
+            <p>Provisioning and managing AWS infrastructure using Terraform.</p>
+        </div>
+
+        <div class="strength">
+            <h3>Containerization</h3>
+            <p>Building and deploying containerized applications using Docker and Kubernetes.</p>
+        </div>
+
+        <div class="strength">
+            <h3>Monitoring & Reliability</h3>
+            <p>Observing application health and performance using Prometheus and Grafana.</p>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+<div class="container reveal">
+
+    <div class="contact-card">
+
+        <h2 class="section-title">
+            Let's <span class="gradient">Connect</span>
+        </h2>
+
+        <p>
+            Interested in working together or have a DevOps opportunity?
+            I'd love to connect and discuss how I can contribute to your team.
+        </p>
+
+        <div class="contact-links">
+
+            <a href="mailto:parvathikallanagoudar@gmail.com"
+               class="btn btn-primary">
+               Email Me ↗
+            </a>
+
+            <a href="https://www.linkedin.com/in/parvathi-kallanagoudar-9b9a52276/"
+               target="_blank" rel="noopener"
+               class="btn btn-outline">
+               LinkedIn ↗
+            </a>
+
+            <a href="https://github.com/ParvathiSKallanagoudar"
+               target="_blank" rel="noopener"
+               class="btn btn-outline">
+               GitHub ↗
+            </a>
+
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    <p>© 2026 Parvathi S. Kallanagoudar | DevOps & Cloud Infrastructure</p>
+    <p>Designed with passion for technology.</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function toggleMenu() {
+
+    const nav = document.getElementById("navLinks");
+    const button = document.getElementById("menuButton");
+
+    nav.classList.toggle("show");
+
+    button.setAttribute(
+        "aria-expanded",
+        nav.classList.contains("show")
+    );
+}
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        document.getElementById("navLinks").classList.remove("show");
+
+        document.getElementById("menuButton")
+            .setAttribute("aria-expanded", "false");
+
+    });
+
+});
+
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("active");
+
+            observer.unobserve(entry.target);
+
+        }
+
+    });
+
+}, { threshold: 0.12 });
+
+document.querySelectorAll(".reveal").forEach(element => {
+
+    observer.observe(element);
+
+});
+
+</script>
 
 </body>
 </html>
